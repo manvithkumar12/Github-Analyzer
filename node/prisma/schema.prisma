@@ -19,6 +19,6 @@ model Profile {
   publicGists   Int
   avatarUrl     String
   profileUrl    String
-  Score B @default(0)
+  Score Float @default(0)
   createdAt     DateTime @default(now())
 }
