@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar" aria-label="Site header">
+      <div class="container navbar__inner">
+        <div class="brand" aria-label="GitHub Analyzer">
+          <svg
+            class="brand__icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M12 2C6.477 2 2 6.627 2 12.332c0 4.567 2.865 8.438 6.839 9.81.5.094.682-.223.682-.496 0-.246-.009-1.067-.014-1.938-2.782.621-3.369-1.203-3.369-1.203-.455-1.183-1.11-1.498-1.11-1.498-.908-.636.069-.623.069-.623 1.004.072 1.532 1.057 1.532 1.057.892 1.57 2.341 1.117 2.91.854.091-.66.35-1.117.636-1.374-2.22-.257-4.555-1.137-4.555-5.057 0-1.117.39-2.031 1.029-2.747-.104-.259-.446-1.301.098-2.713 0 0 .84-.275 2.75 1.048a9.27 9.27 0 0 1 2.5-.344c.848.004 1.704.117 2.5.344 1.91-1.323 2.75-1.048 2.75-1.048.545 1.412.203 2.454.1 2.713.64.716 1.028 1.63 1.028 2.747 0 3.93-2.338 4.798-4.566 5.05.359.316.678.94.678 1.894 0 1.367-.012 2.47-.012 2.806 0 .275.18.594.688.493C19.14 20.766 22 16.9 22 12.332 22 6.627 17.523 2 12 2z"
+            />
+          </svg>
+          <span class="brand__text">GitHub Analyzer</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page">
+      <section class="layout" aria-label="GitHub profile analyzer">
+        <section class="search-panel" aria-labelledby="search-title">
+          <div class="hero-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M12 2C6.477 2 2 6.627 2 12.332c0 4.567 2.865 8.438 6.839 9.81.5.094.682-.223.682-.496 0-.246-.009-1.067-.014-1.938-2.782.621-3.369-1.203-3.369-1.203-.455-1.183-1.11-1.498-1.11-1.498-.908-.636.069-.623.069-.623 1.004.072 1.532 1.057 1.532 1.057.892 1.57 2.341 1.117 2.91.854.091-.66.35-1.117.636-1.374-2.22-.257-4.555-1.137-4.555-5.057 0-1.117.39-2.031 1.029-2.747-.104-.259-.446-1.301.098-2.713 0 0 .84-.275 2.75 1.048a9.27 9.27 0 0 1 2.5-.344c.848.004 1.704.117 2.5.344 1.91-1.323 2.75-1.048 2.75-1.048.545 1.412.203 2.454.1 2.713.64.716 1.028 1.63 1.028 2.747 0 3.93-2.338 4.798-4.566 5.05.359.316.678.94.678 1.894 0 1.367-.012 2.47-.012 2.806 0 .275.18.594.688.493C19.14 20.766 22 16.9 22 12.332 22 6.627 17.523 2 12 2z"
+              />
+            </svg>
+          </div>
+
+          <h1 id="search-title">Analyze GitHub Profiles</h1>
+          <p class="search-panel__description">
+            Enter a GitHub username to fetch profile details from the API and
+            review a clean summary card.
+          </p>
+
+          <form id="searchForm" class="search-form" novalidate>
+            <label class="sr-only" for="usernameInput"
+              >Enter GitHub username</label
+            >
+            <input
+              id="usernameInput"
+              name="username"
+              type="text"
+              placeholder="Enter GitHub username"
+              autocomplete="off"
+              spellcheck="false"
+              required
+            />
+            <button id="searchButton" type="submit">Analyze Profile</button>
+          </form>
+
+          <p id="feedback" class="feedback" role="status" aria-live="polite">
+            Search for a GitHub profile to see details.
+          </p>
+        </section>
+
+        <section class="result-panel" aria-labelledby="result-title">
+          <div
+            id="profileCard"
+            class="profile-card profile-card--empty"
+            aria-live="polite"
+          >
+            <h2 id="result-title" class="profile-card__title">
+              Profile Details
+            </h2>
+            <p class="profile-card__placeholder">
+              Search for a GitHub profile to see details.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

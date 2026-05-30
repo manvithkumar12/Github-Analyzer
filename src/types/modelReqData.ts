@@ -1,0 +1,24 @@
+export type ModelReqDataType = {
+  followers: number;
+  following: number;
+  publicRepos: number;
+  publicGists: number;
+  accountAge: number;
+  hasBio: number;
+  hasCompany: number;
+  hasLocation: number;
+  hasTwitter: number;
+  hasBlog: number;
+  isHireable: number;
+  totalStars: number;
+  totalForks: number;
+  totalWatchers: number;
+  avgStarsPerRepo: number;
+  avgForksPerRepo: number;
+  maxStarsOnRepo: number;
+  maxForksOnRepo: number;
+  languagesCount: number;
+  activeRepos: number;
+  repoSizeTotal: number;
+  recentlyActive: number;
+};
